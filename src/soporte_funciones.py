@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 
 
@@ -64,3 +65,19 @@ def explorar_df(dataframe, nombre = ''):
             print(f'{col}: {len(dataframe[col].value_counts())}')
             print(f'Los valores únicos de la columna "{col}" son: {dataframe[col].unique()}')
 
+
+
+# DETECCIÓN OUTLIERS
+def detectar_outliers(lista_columnas, dataframe): 
+    dicc_indices = {}
+    df = pd.DataFrame()
+    for col in lista_columnas:
+        Q1 = np.percentile(dataframe[col], 25)
+        Q3 = np.percentile(dataframe[col], 75)
+        IQR = Q3 - Q1
+        outlier_step = 1.5 * IQR
+        outliers_data = dataframe[(dataframe[col] < (Q1 - outlier_step)) | (dataframe[col] > (Q3 + outlier_step))]
+        df = pd.concat([df, outliers_data], axis=0)
+        if outliers_data.shape[0] > 0:
+            dicc_indices[col] = (list(outliers_data.index))   
+    return df, dicc_indices # estraemos tanto el dataframe con los outliers como el diccionario con sus índices
