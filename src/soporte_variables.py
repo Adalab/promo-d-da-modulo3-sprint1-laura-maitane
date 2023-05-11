@@ -19,3 +19,5 @@ renombrado_columnas = {'population_in_thousands_(2017)': 'population_2017',
                         'inflation,_consumer_prices_(annual_%)': 'inflation',
                         'urban_population_(%_of_total_population)_y': 'urban_population'
                         }
+
+lista_float = ['population_age_distribution_0_14', 'population_age_distribution_60_plus', 'international_migrant_stock_000', 'international_migrant_stock']
