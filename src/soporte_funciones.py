@@ -43,7 +43,7 @@ def explorar_df(dataframe, nombre = ''):
         print(f'{dataframe.isnull().sum().index[i]}: nº de nulos: {col}. % de nulos: {round(col/dataframe.shape[0]*100, 2)} %')
     print('---------------------------------------------------------------------------')
     try:
-        print(f'El nº de filas duplicadas del dataframe {nombre} es: {df.duplicated().sum()}')
+        print(f'El nº de filas duplicadas del dataframe {nombre} es: {dataframe.duplicated().sum()}')
     except:
         print(f'Ha ocurrido un error. No se ha podido comprobar si el dataframe {nombre} tiene filas duplicdas')
     print('---------------------------------------------------------------------------')
