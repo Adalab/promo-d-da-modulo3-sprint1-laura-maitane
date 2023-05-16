@@ -1,5 +1,12 @@
-import numpy as np
+# Tratamiento de los datos
+# ========================
 import pandas as pd
+import numpy as np
+
+# Librerías para realizar la codificación
+# =======================================
+from sklearn.preprocessing import OrdinalEncoder
+
 
 
 
@@ -69,6 +76,14 @@ def explorar_df(dataframe, nombre = ''):
 
 # DETECCIÓN OUTLIERS
 def detectar_outliers(lista_columnas, dataframe): 
+    """Esta función realiza detección de aoutliers de las columnas indicadas de un dataframe dado.      
+        Parámetros:
+            - lista_columnas (list): lista de las columnas en las que queremos detectar los outliers
+            - dataframe (pandas.core.frame.DataFrame): dataframe que se requiere explorar
+        Return: 
+            - df (pandas.core.frame.DataFrame): dataframe con los outliers detectados
+            - dicc_indices (dict): diccionario con los índices de los mismos.
+    """
     dicc_indices = {}
     df = pd.DataFrame()
     for col in lista_columnas:
@@ -81,3 +96,23 @@ def detectar_outliers(lista_columnas, dataframe):
         if outliers_data.shape[0] > 0:
             dicc_indices[col] = (list(outliers_data.index))   
     return df, dicc_indices # estraemos tanto el dataframe con los outliers como el diccionario con sus índices
+
+
+# ENCODING
+def ordinal_encoder(df, columna, orden_valores, lista_índice):
+    """Esta función utiliza el ordinal encoder para ralizar el encoding de una columna dada. 
+    Parámetros:
+        - df (pandas.core.frame.DataFrame): dataframe sobre el que queremos realizar el encoding
+        - columna (pandas.core.series.Series): columna a la que queremos aplicar el encoding
+        - orden_valores (list): lista con las categorías ordenadas de menor a mayor valor de la mediana de la variable respuesta
+        - lista_índice (list): lista con los valores del índice que le queremos poner al dataframe con los datos codificados al crearlo
+    Return:
+        - df (pandas.core.frame.DataFrame): dataframe con el cncoding realizado
+    """ 
+    ordinal = OrdinalEncoder(categories = [orden_valores], dtype = int) # iniciamos el método
+    transformados_oe = ordinal.fit_transform(df[[columna]]) # aplicamos la transformación a los datos
+    oe_df = pd.DataFrame(transformados_oe, index=lista_índice) # lo convertimos a dataframe
+    oe_df.columns = ordinal.feature_names_in_ # cambiamos el nombre de la columna
+    columna += "_oe" # nombre columna generada
+    df[columna] = oe_df # sobreescribimos la columna con los valores de la tranformación 
+    return df

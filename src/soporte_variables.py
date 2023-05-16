@@ -31,6 +31,9 @@ paises_indice = ['Argentina',  'Australia',  'Austria',  'Belarus',  'Belgium', 
 
 lista_float = ['population_age_distribution_0_14', 'population_age_distribution_60_plus', 'international_migrant_stock_000', 'international_migrant_stock']
 
+orden_regiones = ['NorthernAfrica', 'SouthernAsia', 'South-easternAsia', 'CentralAmerica', 'EasternEurope', 'SouthernAfrica', 'SouthernEurope', 'SouthAmerica', 'EasternAsia',
+                  'WesternAsia', 'NorthernAmerica', 'Oceania', 'WesternEurope', 'NorthernEurope']
+
 
 
 # VARIABLES PARA REGRESIÓN LOGÍSTICA (DATAFRAME AEROLINEA)
