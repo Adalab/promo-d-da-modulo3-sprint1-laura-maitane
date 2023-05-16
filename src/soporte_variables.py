@@ -1,3 +1,5 @@
+# VARIABLES PARA REGRESIÓN LINEAL (DATAFRAME SOCIO-ECONOMICO)
+
 # primera selección de columnas
 lista_columnas = ['country', 'Region', 'Population in thousands (2017)', 'GDP per capita (current US$)',
                    'Employment: Agriculture (% of employed)', 'Employment: Industry (% of employed)', 'Employment: Services (% of employed)', 'Population age distribution (0-14 / 60+ years, %)',
@@ -20,4 +22,19 @@ renombrado_columnas = {'population_in_thousands_(2017)': 'population_2017',
                         'urban_population_(%_of_total_population)_y': 'urban_population'
                         }
 
+paises_indice = ['Argentina',  'Australia',  'Austria',  'Belarus',  'Belgium',  'Bosnia and Herzegovina',  'Brazil',  'Bulgaria',  'Canada',  'Chile',  'China, Hong Kong SAR',
+                'China',  'Colombia',  'Croatia', 'Cyprus', 'Czechia', 'Denmark', 'Egypt', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'India', 'Indonesia',
+                'Iran (Islamic Republic of)', 'Ireland', 'Israel', 'Italy', 'Japan', 'Jordan', 'Lebanon', 'Lithuania', 'Malaysia', 'Mexico', 'Netherlands', 'New Zealand',
+                'Norway', 'Pakistan', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Republic of Korea', 'Romania', 'Russian Federation', 'Saudi Arabia', 'Serbia', 'Singapore',
+                'Slovakia', 'Slovenia', 'South Africa', 'Spain', 'Sri Lanka', 'Sweden', 'Switzerland', 'Thailand', 'The former Yugoslav Republic of Macedonia', 'Turkey',
+                'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States of America', 'Venezuela (Bolivarian Republic of)', 'Vietnam']
+
 lista_float = ['population_age_distribution_0_14', 'population_age_distribution_60_plus', 'international_migrant_stock_000', 'international_migrant_stock']
+
+
+
+# VARIABLES PARA REGRESIÓN LOGÍSTICA (DATAFRAME AEROLINEA)
+
+columnas_categoria = ["seat_comfort", "departure_arrival_time_convenient", "food_and_drink", "gate_location", "inflight_wifi_service", "inflight_entertainment", 
+                      "online_support", "ease_of_online_booking", "onboard_service", "leg_room_service", "baggage_handling", "checkin_service", "cleanliness", 
+                      "online_boarding", "gender", "customer_type", "type_of_travel", "class"]
