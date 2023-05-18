@@ -34,6 +34,7 @@ lista_float = ['population_age_distribution_0_14', 'population_age_distribution_
 orden_regiones = ['NorthernAfrica', 'SouthernAsia', 'South-easternAsia', 'CentralAmerica', 'EasternEurope', 'SouthernAfrica', 'SouthernEurope', 'SouthAmerica', 'EasternAsia',
                   'WesternAsia', 'NorthernAmerica', 'Oceania', 'WesternEurope', 'NorthernEurope']
 
+col_anova = ['region_map', 'purchasing_power_index', 'cost_of_living', 'human_capital_index', 'inflation', 'urban_population']
 
 
 # VARIABLES PARA REGRESIÓN LOGÍSTICA (DATAFRAME AEROLINEA)

@@ -9,11 +9,7 @@ from sklearn.preprocessing import OrdinalEncoder
 
 #  Modelado y métricas
 # ====================
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score , cohen_kappa_score, roc_curve,roc_auc_score
-
-
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score , cohen_kappa_score, roc_curve,roc_auc_score, r2_score, mean_squared_error, mean_absolute_error
 
 
 # EDA. EXPLORACIÓN NUMÉRICA
@@ -123,28 +119,38 @@ def ordinal_encoder(df, columna, orden_valores, lista_índice):
     df[columna] = oe_df # sobreescribimos la columna con los valores de la tranformación 
     return df
 
+
+# REGRESIÓN LINEAL. MÉTRICAS
+def metricas_rlin(real_test, predict_test, real_train, predict_train, modelo):
+    resultados = {'MAE': [mean_absolute_error(real_test, predict_test), mean_absolute_error(real_train, predict_train)],
+                'MSE': [mean_squared_error(real_test, predict_test), mean_squared_error(real_train, predict_train)],
+                'RMSE': [np.sqrt(mean_squared_error(real_test, predict_test)), np.sqrt(mean_squared_error(real_train, predict_train))],
+                'R2':  [r2_score(real_test, predict_test), r2_score(real_train, predict_train)],
+                 "set": ["test", "train"], 
+                 "modelo": [modelo, modelo]}
+    df = pd.DataFrame(resultados)
+    return df
+
 # REGRESIÓN LOGÍSTICA. MÉTRICAS
-def metricas(clases_reales_test, clases_predichas_test, clases_reales_train, clases_predichas_train, modelo):
+def metricas_rlog(clases_reales_test, clases_predichas_test, clases_reales_train, clases_predichas_train, modelo):  
     # para el test
     accuracy_test = accuracy_score(clases_reales_test, clases_predichas_test)
     precision_test = precision_score(clases_reales_test, clases_predichas_test) # pos_label='satisfied'
     recall_test = recall_score(clases_reales_test, clases_predichas_test)
     f1_test = f1_score(clases_reales_test, clases_predichas_test)
     kappa_test = cohen_kappa_score(clases_reales_test, clases_predichas_test)
-
     # para el train
     accuracy_train = accuracy_score(clases_reales_train, clases_predichas_train)
     precision_train = precision_score(clases_reales_train, clases_predichas_train)
     recall_train = recall_score(clases_reales_train, clases_predichas_train)
     f1_train = f1_score(clases_reales_train, clases_predichas_train)
     kappa_train = cohen_kappa_score(clases_reales_train, clases_predichas_train)
-    
+    #creamos el df
     df = pd.DataFrame({"accuracy": [accuracy_test, accuracy_train], 
                        "precision": [precision_test, precision_train],
                        "recall": [recall_test, recall_train], 
                        "f1": [f1_test, f1_train],
-                       "kapppa": [kappa_test, kappa_train],
+                       "kappa": [kappa_test, kappa_train],
                        "set": ["test", "train"]})
-    
     df["modelo"] = modelo
     return df
