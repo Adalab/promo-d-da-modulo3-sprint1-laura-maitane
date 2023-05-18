@@ -40,4 +40,4 @@ orden_regiones = ['NorthernAfrica', 'SouthernAsia', 'South-easternAsia', 'Centra
 
 columnas_categoria = ["seat_comfort", "departure_arrival_time_convenient", "food_and_drink", "gate_location", "inflight_wifi_service", "inflight_entertainment", 
                       "online_support", "ease_of_online_booking", "onboard_service", "leg_room_service", "baggage_handling", "checkin_service", "cleanliness", 
-                      "online_boarding", "gender", "customer_type", "type_of_travel", "class"]
+                      "online_boarding"]

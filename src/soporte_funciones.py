@@ -7,6 +7,12 @@ import numpy as np
 # =======================================
 from sklearn.preprocessing import OrdinalEncoder
 
+#  Modelado y métricas
+# ====================
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score , cohen_kappa_score, roc_curve,roc_auc_score
+
 
 
 
@@ -115,4 +121,30 @@ def ordinal_encoder(df, columna, orden_valores, lista_índice):
     oe_df.columns = ordinal.feature_names_in_ # cambiamos el nombre de la columna
     columna += "_oe" # nombre columna generada
     df[columna] = oe_df # sobreescribimos la columna con los valores de la tranformación 
+    return df
+
+# REGRESIÓN LOGÍSTICA. MÉTRICAS
+def metricas(clases_reales_test, clases_predichas_test, clases_reales_train, clases_predichas_train, modelo):
+    # para el test
+    accuracy_test = accuracy_score(clases_reales_test, clases_predichas_test)
+    precision_test = precision_score(clases_reales_test, clases_predichas_test) # pos_label='satisfied'
+    recall_test = recall_score(clases_reales_test, clases_predichas_test)
+    f1_test = f1_score(clases_reales_test, clases_predichas_test)
+    kappa_test = cohen_kappa_score(clases_reales_test, clases_predichas_test)
+
+    # para el train
+    accuracy_train = accuracy_score(clases_reales_train, clases_predichas_train)
+    precision_train = precision_score(clases_reales_train, clases_predichas_train)
+    recall_train = recall_score(clases_reales_train, clases_predichas_train)
+    f1_train = f1_score(clases_reales_train, clases_predichas_train)
+    kappa_train = cohen_kappa_score(clases_reales_train, clases_predichas_train)
+    
+    df = pd.DataFrame({"accuracy": [accuracy_test, accuracy_train], 
+                       "precision": [precision_test, precision_train],
+                       "recall": [recall_test, recall_train], 
+                       "f1": [f1_test, f1_train],
+                       "kapppa": [kappa_test, kappa_train],
+                       "set": ["test", "train"]})
+    
+    df["modelo"] = modelo
     return df
