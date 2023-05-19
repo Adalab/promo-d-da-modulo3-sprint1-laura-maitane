@@ -135,7 +135,7 @@ def metricas_rlin(real_test, predict_test, real_train, predict_train, modelo):
 def metricas_rlog(clases_reales_test, clases_predichas_test, clases_reales_train, clases_predichas_train, modelo):  
     # para el test
     accuracy_test = accuracy_score(clases_reales_test, clases_predichas_test)
-    precision_test = precision_score(clases_reales_test, clases_predichas_test) # pos_label='satisfied'
+    precision_test = precision_score(clases_reales_test, clases_predichas_test) # si falla: pos_label='satisfied'
     recall_test = recall_score(clases_reales_test, clases_predichas_test)
     f1_test = f1_score(clases_reales_test, clases_predichas_test)
     kappa_test = cohen_kappa_score(clases_reales_test, clases_predichas_test)
