@@ -5,23 +5,48 @@ Este repositorio incluye los ejercicios de Pair Programming de Laura Madrid y Ma
 La documentación se ha organizado en las siguientes carpetas:
 - [**regresion-lineal:**](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/tree/main/regresion-lineal) Recoge los ejercicios de regresión lineal. Incluye los siguientes archivos y carpetas:
     * [***datos***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/tree/main/regresion-lineal/datos): contiene los archivos .csv y .jpeg utilizados/generados en los ejercicios.
-    * [***reg-lin-1-machine-learning-intro.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-1-machine-learning-intro.ipynb): contiene los ejercicios de la lección 1 de regresión lineal (EDA del dataset).
+    * [***reg-lin-01-machine-learning-intro.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-01-machine-learning-intro.ipynb): contiene los ejercicios de la lección 1 de regresión lineal (EDA del dataset).
+    * [***reg-lin-02-tests-estadisticos.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-02-tests-estadisticos.ipynb): contiene los ejercicios de la lección 2 de regresión lineal (tests estadísticos).
+    * [***reg-lin-03-correlacion-covarianza.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-03-correlacion-covarianza.ipynb): contiene los ejercicios de la lección 3 de regresión lineal (correlación y covarianza).
+    * [***reg-lin-04-asunciones.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-04-asunciones.ipynb): contiene los ejercicios de la lección 4 de regresión lineal (asunciones de la regresión lineal).
+    * [***reg-lin-05-normalizacion.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-05-normalizacion.ipynb): contiene los ejercicios de la lección 5 de regresión lineal (normalización de la VR).
+    * [***reg-lin-06-estandarizacion.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-06-estandarizacion.ipynb): contiene los ejercicios de la lección 6 de regresión lineal (estandarizaciíon de las VP).
+    * [***reg-lin-07-ANOVA.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-07-ANOVA.ipynb): contiene los ejercicios de la lección 7 de regresión lineal (ANOVA).
+    * [***reg-lin-08-encoding.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-08-encoding.ipynb): contiene los ejercicios de la lección 8 de regresión lineal (encoding).
+    * [***reg-lin-09.intro-regresion-lineal.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-09.intro-regresion-lineal.ipynb): contiene los ejercicios de la lección 9 de regresión lineal (Regresión Lineal).
+    * [***reg-lin-10-metricas.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-10-metricas.ipynb): contiene los ejercicios de la lección 10 de regresión lineal (métricas).
+    * [***reg-lin-11-decision-tree.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-11-decision-tree.ipynb): contiene los ejercicios de la lección 11 de regresión lineal (Decision Tree).
+    * [***reg-lin-12-random-forest.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-lineal/reg-lin-12-random-forest.ipynb): contiene los ejercicios de la lección 12 de regresión lineal (Random Forest).
 - [**regresion-logistica:**](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/tree/main/regresion-logistica) recoge los ejercicios de regresión logística. Incluye los siguientes archivos y carpetas:
     * [***datos***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/tree/main/regresion-logistica/datos): contiene los archivos .csv y .pkl utilizados/generados en los ejercicios.
     * [***reg-log-1-eda.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-logistica/reg-log-1-eda.ipynb): contiene los ejercicios de la lección 1 de regresión logística (EDA del dataset).
+    * [***reg-log-2-procesado.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-logistica/reg-log-2-procesado.ipynb): contiene los ejercicios de la lección 2 de regresión logística (procesado de los datos).
+    * [***reg-log-3-ajuste.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-logistica/reg-log-3-ajuste.ipynb): contiene los ejercicios de la lección 3 de regresión logística (ajuste del modelo y matriz de confusión).
+    * [***reg-log-4-metricas.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-logistica/reg-log-4-metricas.ipynb): contiene los ejercicios de la lección 4 de regresión logística (métricas).
+    * [***reg-log-5-decision-tree.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-logistica/reg-log-5-decision-tree.ipynb): contiene los ejercicios de la lección 5 de regresión logística (Decision Tree).
+    * [***reg-log-6-random-forest.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-logistica/reg-log-6-random-forest.ipynb): contiene los ejercicios de la lección 6 de regresión logística (Random Forest).
+    * [***reg-log-6-random-forest-con-arboles.ipynb***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/regresion-logistica/reg-log-6-random-forest-con-arboles.ipynb): contiene los ejercicios de la lección 12 de regresión logística (Random Forest), incluyendo los árboles del bosque ploteados (no permite visualización en github por tamaño del archivo pero sí permite la descarga).
 - [**src:**](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/tree/main/src) Incluye los siguientes archivos para facilitar la lectura de los notebooks:
     * [***soporte_funciones.py***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/src/soporte_funciones.py): archivo .py con las funciones utilizadas en los notebooks.
     * [***soporte_variables.py***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/src/soporte_variables.py): archivo .py con las variables de gran tamaño utilizadas en los notebooks.
-
-A continuación se incluye un listado de las librerías utilizadas:
-    - pandas
-    - numpy
-    - warnings
-    - sys
-    - matplotlib
-    - seaborn
-    - sklearn
-
+---
+A continuación se incluye un listado de las librerías utilizadas:  
+- pandas  
+- numpy  
+- warnings    
+- sys  
+- matplotlib  
+- seaborn  
+- sklearn  
+- scipy  
+- statsmodels  
+- researchpy  
+- itertools  
+- math  
+- imblearn  
+- collections  
+- qdm  
+---
 **DESCRIPCIÓN DEL PROCESO:**
 ---
 **1. REGRESIÓN LINEAL:**  
