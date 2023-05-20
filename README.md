@@ -31,21 +31,21 @@ La documentación se ha organizado en las siguientes carpetas:
     * [***soporte_variables.py***](https://github.com/Adalab/promo-d-da-modulo3-sprint1-laura-maitane/blob/main/src/soporte_variables.py): archivo .py con las variables de gran tamaño utilizadas en los notebooks.
 ---
 A continuación se incluye un listado de las librerías utilizadas:  
-- pandas  
-- numpy  
-- warnings    
-- sys  
-- matplotlib  
-- seaborn  
-- sklearn  
-- scipy  
-- statsmodels  
-- researchpy  
-- itertools  
-- math  
-- imblearn  
-- collections  
-- qdm  
+- [pandas](https://pandas.pydata.org/)  
+- [numpy](https://numpy.org/)  
+- [warnings](https://docs.python.org/3/library/warnings.html)    
+- [sys](https://docs.python.org/3/library/sys.html)  
+- [matplotlib](https://matplotlib.org/)  
+- [seaborn](https://seaborn.pydata.org/)  
+- [sklearn](https://scikit-learn.org/stable/)  
+- [scipy](https://scipy.org/)  
+- [statsmodels](https://www.statsmodels.org/stable/index.html)    
+- [researchpy](https://pypi.org/project/researchpy/)    
+- [itertools](https://docs.python.org/3/library/itertools.html)    
+- [math](https://docs.python.org/3/library/math.html)   
+- [imblearn](https://imbalanced-learn.org/stable/)   
+- [collections](https://docs.python.org/3/library/collections.html)  
+- [tqdm](https://pypi.org/project/tqdm/)  
 ---
 **DESCRIPCIÓN DEL PROCESO:**
 ---
